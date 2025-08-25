@@ -10,13 +10,26 @@ const Home: React.FC = () => {
     <div className="page home-page">
       <div className="container">
         <div className="hero-section">
-          <h1 className="hero-title">🍵 Добро пожаловать в Чайный Мир</h1>
-          <p className="hero-subtitle">
-            Откройте для себя лучшие сорта габа, пуэра и улуна
-          </p>
-          <Link to="/catalog" className="btn btn-primary hero-btn">
-            Перейти в каталог
-          </Link>
+          <div className="hero-content">
+            <h1 className="hero-title">Alfrerov tea</h1>
+            <p className="hero-subtitle">
+              Откройте для себя мир изысканных чаев
+            </p>
+            <p className="hero-description">
+              Наша миссия - наполнить вашу жизнь вкусом настоящего чая, 
+              доставленного прямо к вам домой
+            </p>
+            <Link to="/catalog" className="btn btn-primary hero-btn">
+              Перейти в каталог
+            </Link>
+          </div>
+          <div className="hero-visual">
+            <div className="tea-elements">
+              <div className="tea-cup">☕</div>
+              <div className="tea-leaves">🍃</div>
+              <div className="tea-pot">🫖</div>
+            </div>
+          </div>
         </div>
 
         <section className="categories-section">

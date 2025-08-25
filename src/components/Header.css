@@ -15,11 +15,13 @@
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: white;
   text-decoration: none;
   transition: transform 0.2s ease;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
 }
 
 .logo:hover {
@@ -91,6 +93,10 @@
   .nav-link {
     padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
   }
 }
 
