@@ -15,37 +15,29 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="container">
         <div className="header-content">
-          <Link to="/" className="logo">
-            Alfrerov tea
-          </Link>
+          <div className="header-left">
+            {/* Пустое место вместо логотипа */}
+          </div>
           
-          <nav className="nav">
-            <Link 
-              to="/" 
-              className={`nav-link ${isActive('/') ? 'active' : ''}`}
-            >
-              Главная
-            </Link>
-            <Link 
-              to="/catalog" 
-              className={`nav-link ${isActive('/catalog') ? 'active' : ''}`}
-            >
-              Каталог
-            </Link>
+          <div className="header-center">
+            {/* Центральная часть пустая */}
+          </div>
+          
+          <div className="header-right">
             <Link 
               to="/profile" 
               className={`nav-link ${isActive('/profile') ? 'active' : ''}`}
             >
               Профиль
             </Link>
-          </nav>
-
-          <Link to="/cart" className="cart-button">
-            🛒 Корзина
-            {cartItemsCount > 0 && (
-              <span className="cart-badge">{cartItemsCount}</span>
-            )}
-          </Link>
+            
+            <Link to="/cart" className="cart-button">
+              🛒 Корзина
+              {cartItemsCount > 0 && (
+                <span className="cart-badge">{cartItemsCount}</span>
+              )}
+            </Link>
+          </div>
         </div>
       </div>
     </header>

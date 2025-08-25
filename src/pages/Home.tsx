@@ -12,16 +12,19 @@ const Home: React.FC = () => {
         <div className="hero-section">
           <div className="hero-content">
             <h1 className="hero-title">Alfrerov tea</h1>
-            <p className="hero-subtitle">
-              Откройте для себя мир изысканных чаев
+            <p className="hero-motto">
+              Замедляйся. Слушай. Пробуй. Исследуй.
             </p>
             <p className="hero-description">
-              Наша миссия - наполнить вашу жизнь вкусом настоящего чая, 
-              доставленного прямо к вам домой
+              Здесь вы найдёте разные виды чая — от классики до редких сортов. 
+              Каждый чай имеет свой характер, аромат и настроение, 
+              которые можно почувствовать в каждой чашке.
             </p>
-            <Link to="/catalog" className="btn btn-primary hero-btn">
-              Перейти в каталог
-            </Link>
+            <div className="hero-button-container">
+              <Link to="/catalog" className="btn btn-primary hero-btn">
+                Перейти в каталог
+              </Link>
+            </div>
           </div>
           <div className="hero-visual">
             <div className="tea-elements">
@@ -47,27 +50,6 @@ const Home: React.FC = () => {
                 <span className="category-arrow">→</span>
               </Link>
             ))}
-          </div>
-        </section>
-
-        <section className="features-section">
-          <h2 className="section-title">Почему выбирают нас?</h2>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">🌍</div>
-              <h3>Лучшие сорта</h3>
-              <p>Отборные чаи из Тайваня, Китая и других стран</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🚚</div>
-              <h3>Быстрая доставка</h3>
-              <p>Доставляем по всей России в течение 1-3 дней</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">💳</div>
-              <h3>Удобная оплата</h3>
-              <p>Оплачивайте картой, наличными или через Telegram</p>
-            </div>
           </div>
         </section>
 
