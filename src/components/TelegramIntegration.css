@@ -1,0 +1,30 @@
+.telegram-integration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-text {
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 768px) {
+  .telegram-integration {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+}
