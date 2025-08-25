@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -7,15 +7,9 @@ import Product from './pages/Product'
 import Cart from './pages/Cart'
 import Profile from './pages/Profile'
 import Checkout from './pages/Checkout'
-import { initTelegramApp } from './utils/telegram'
 import './App.css'
 
 function App() {
-  useEffect(() => {
-    // Инициализируем Telegram Web App при загрузке
-    initTelegramApp();
-  }, []);
-
   return (
     <Router>
       <div className="App">

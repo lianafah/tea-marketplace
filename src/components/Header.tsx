@@ -31,7 +31,17 @@ const Header: React.FC = () => {
               Профиль
             </Link>
             
-            <Link to="/cart" className="cart-button">
+            <Link 
+              to="/catalog" 
+              className={`nav-link ${isActive('/catalog') ? 'active' : ''}`}
+            >
+              Каталог
+            </Link>
+            
+            <Link 
+              to="/cart" 
+              className={`nav-link ${isActive('/cart') ? 'active' : ''}`}
+            >
               🛒 Корзина
               {cartItemsCount > 0 && (
                 <span className="cart-badge">{cartItemsCount}</span>

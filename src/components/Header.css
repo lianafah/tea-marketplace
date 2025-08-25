@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
+  background: #e5c9b3;
   color: white;
   padding: 1rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -33,38 +33,23 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  font-family: 'Playfair Display', serif;
-}
-
-.nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nav-link.active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.cart-button {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-weight: 500;
   transition: all 0.2s ease;
+  font-family: 'Playfair Display', serif;
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Playfair Display', serif;
 }
 
-.cart-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .cart-badge {

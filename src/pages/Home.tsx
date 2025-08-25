@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { teas, teaCategories } from '../data/teaData'
+import { useFavoritesStore } from '../stores/favoritesStore'
 import './Home.css'
 
 const Home: React.FC = () => {
   const popularTeas = teas.slice(0, 6)
+  const { isFavorite, toggleFavorite } = useFavoritesStore()
 
   return (
     <div className="page home-page">
@@ -58,7 +60,20 @@ const Home: React.FC = () => {
           <div className="teas-grid">
             {popularTeas.map((tea) => (
               <div key={tea.id} className="tea-card">
-                <div className="tea-image">{tea.image}</div>
+                <div className="tea-image-container">
+                  <div className="tea-image">{tea.image}</div>
+                  <button 
+                    className={`favorite-btn ${isFavorite(tea.id) ? 'active' : ''}`}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      toggleFavorite(tea.id)
+                    }}
+                    aria-label={isFavorite(tea.id) ? 'Убрать из избранного' : 'Добавить в избранное'}
+                  >
+                    {isFavorite(tea.id) ? '❤️' : '🤍'}
+                  </button>
+                </div>
                 <div className="tea-info">
                   <h3 className="tea-name">{tea.name}</h3>
                   <p className="tea-description">{tea.description}</p>
