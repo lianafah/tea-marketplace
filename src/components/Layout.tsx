@@ -2,12 +2,12 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
-import TelegramIntegration from './TelegramIntegration'
+// import TelegramIntegration from './TelegramIntegration'
 
 const Layout: React.FC = () => {
   return (
     <div className="layout">
-      <TelegramIntegration />
+      {/* <TelegramIntegration /> */}
       <Header />
       <main className="main-content">
         <Outlet />
