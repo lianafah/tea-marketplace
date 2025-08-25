@@ -58,50 +58,70 @@ declare global {
 }
 
 export const initTelegramApp = () => {
-  if (window.Telegram?.WebApp) {
-    const webApp = window.Telegram.WebApp;
-    
-    // Инициализируем приложение
-    webApp.ready();
-    
-    // Расширяем на всю высоту
-    webApp.expand();
-    
-    // Настраиваем основную кнопку
-    webApp.MainButton.text = 'Оформить заказ';
-    webApp.MainButton.color = '#2d5a27';
-    webApp.MainButton.textColor = '#ffffff';
-    
-    return webApp;
+  try {
+    if (window.Telegram?.WebApp) {
+      const webApp = window.Telegram.WebApp;
+      
+      // Инициализируем приложение
+      webApp.ready();
+      
+      // Расширяем на всю высоту
+      webApp.expand();
+      
+      // Настраиваем основную кнопку
+      webApp.MainButton.text = 'Оформить заказ';
+      webApp.MainButton.color = '#2d5a27';
+      webApp.MainButton.textColor = '#ffffff';
+      
+      return webApp;
+    }
+  } catch (error) {
+    console.log('Telegram Web App не доступен:', error);
   }
   
   return null;
 };
 
 export const getTelegramUser = () => {
-  if (window.Telegram?.WebApp?.initDataUnsafe?.user) {
-    return window.Telegram.WebApp.initDataUnsafe.user;
+  try {
+    if (window.Telegram?.WebApp?.initDataUnsafe?.user) {
+      return window.Telegram.WebApp.initDataUnsafe.user;
+    }
+  } catch (error) {
+    console.log('Не удалось получить данные пользователя:', error);
   }
   return null;
 };
 
 export const showMainButton = (text: string, callback: () => void) => {
-  if (window.Telegram?.WebApp) {
-    const webApp = window.Telegram.WebApp;
-    webApp.MainButton.text = text;
-    webApp.MainButton.onClick(callback);
-    webApp.MainButton.show();
+  try {
+    if (window.Telegram?.WebApp) {
+      const webApp = window.Telegram.WebApp;
+      webApp.MainButton.text = text;
+      webApp.MainButton.onClick(callback);
+      webApp.MainButton.show();
+    }
+  } catch (error) {
+    console.log('Не удалось показать главную кнопку:', error);
   }
 };
 
 export const hideMainButton = () => {
-  if (window.Telegram?.WebApp) {
-    window.Telegram.WebApp.MainButton.hide();
+  try {
+    if (window.Telegram?.WebApp) {
+      window.Telegram.WebApp.MainButton.hide();
+    }
+  } catch (error) {
+    console.log('Не удалось скрыть главную кнопку:', error);
   }
 };
 
 export const closeApp = () => {
-  if (window.Telegram?.WebApp) {
-    window.Telegram.WebApp.close();
+  try {
+    if (window.Telegram?.WebApp) {
+      window.Telegram.WebApp.close();
+    }
+  } catch (error) {
+    console.log('Не удалось закрыть приложение:', error);
   }
 };

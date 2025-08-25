@@ -14,11 +14,15 @@ const TelegramIntegration: React.FC = () => {
   const [isTelegramApp, setIsTelegramApp] = useState(false)
 
   useEffect(() => {
-    // Проверяем, запущено ли приложение в Telegram
-    const telegramUser = getTelegramUser()
-    if (telegramUser) {
-      setUser(telegramUser)
-      setIsTelegramApp(true)
+    try {
+      // Проверяем, запущено ли приложение в Telegram
+      const telegramUser = getTelegramUser()
+      if (telegramUser) {
+        setUser(telegramUser)
+        setIsTelegramApp(true)
+      }
+    } catch (error) {
+      console.log('Ошибка при инициализации Telegram:', error)
     }
   }, [])
 
