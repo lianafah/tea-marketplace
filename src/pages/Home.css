@@ -32,10 +32,10 @@
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Noah', 'Playfair Display', serif;
   letter-spacing: 1px;
   text-align: center;
   width: 100%;
