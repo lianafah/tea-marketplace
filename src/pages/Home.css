@@ -8,10 +8,10 @@
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #8fbc8f 0%, #a8e6cf 100%);
+  background: linear-gradient(135deg, #e5c9b3 0%, #d4b8a0 100%);
   border-radius: 24px;
   margin: 0 2rem 4rem 2rem;
-  color: white;
+  color: #2d2d2d;
   position: relative;
   overflow: hidden;
   min-height: 80vh;
@@ -49,7 +49,7 @@
   font-weight: 400;
   font-family: 'Dancing Script', cursive;
   line-height: 1.3;
-  color: #f0f8f0;
+  color: #4a4a4a;
 }
 
 .hero-description {
@@ -61,6 +61,7 @@
   margin-left: auto;
   margin-right: auto;
   font-family: 'Playfair Display', serif;
+  color: #5a5a5a;
 }
 
 .hero-button-container {
@@ -72,14 +73,15 @@
 .hero-btn {
   font-size: 1.1rem;
   padding: 1rem 2rem;
-  background-color: #2d5a27;
-  border: 2px solid white;
+  background-color: #8b6b4b;
+  border: 2px solid #e5c9b3;
   border-radius: 12px;
   transition: all 0.3s ease;
+  color: white;
 }
 
 .hero-btn:hover {
-  background-color: #1e3d1a;
+  background-color: #6b4f3a;
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
@@ -127,12 +129,12 @@
 }
 
 .category-card {
-  background: white;
+  background: #f8f4f0;
   padding: 2.5rem 2rem;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
-  border: 2px solid #f0f8f0;
+  border: 2px solid #e5c9b3;
   transition: all 0.4s ease;
   text-decoration: none;
   color: inherit;
@@ -147,7 +149,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(135deg, #8fbc8f 0%, #a8e6cf 100%);
+  background: linear-gradient(135deg, #e5c9b3 0%, #d4b8a0 100%);
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
@@ -155,7 +157,7 @@
 .category-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(139, 69, 19, 0.15);
-  border-color: #8fbc8f;
+  border-color: #d4b8a0;
 }
 
 .category-card:hover::before {
@@ -173,7 +175,7 @@
 }
 
 .category-card h3 {
-  color: #2d5a27;
+  color: #8b6b4b;
   margin-bottom: 1rem;
   font-size: 1.4rem;
   font-weight: 600;
@@ -188,7 +190,7 @@
 }
 
 .category-arrow {
-  color: #8fbc8f;
+  color: #d4b8a0;
   font-size: 1.8rem;
   font-weight: 700;
   transition: transform 0.3s ease;
@@ -210,18 +212,18 @@
 }
 
 .tea-card {
-  background: white;
+  background: #f8f4f0;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
   transition: all 0.4s ease;
-  border: 2px solid #f0f8f0;
+  border: 2px solid #e5c9b3;
 }
 
 .tea-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(139, 69, 19, 0.15);
-  border-color: #8fbc8f;
+  border-color: #d4b8a0;
 }
 
 .tea-image-container {
@@ -236,7 +238,7 @@
   font-size: 4.5rem;
   text-align: center;
   padding: 2.5rem;
-  background: linear-gradient(135deg, #f0f8f0 0%, #e6f3e6 100%);
+  background: linear-gradient(135deg, #f0f0e8 0%, #e8e0d8 100%);
   transition: all 0.3s ease;
   border-radius: 12px;
 }
@@ -278,7 +280,7 @@
 }
 
 .tea-name {
-  color: #2d5a27;
+  color: #8b6b4b;
   font-size: 1.3rem;
   margin-bottom: 0.75rem;
   font-weight: 600;

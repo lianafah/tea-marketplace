@@ -1,6 +1,6 @@
 .header {
   background: #e5c9b3;
-  color: white;
+  color: #2d2d2d;
   padding: 1rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -30,7 +30,7 @@
 }
 
 .nav-link {
-  color: white;
+  color: #2d2d2d;
   text-decoration: none;
   font-weight: 500;
   padding: 0.75rem 1.5rem;
@@ -44,12 +44,12 @@
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(139, 107, 75, 0.1);
   transform: translateY(-1px);
 }
 
 .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(139, 107, 75, 0.2);
 }
 
 .cart-badge {

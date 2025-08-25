@@ -1,5 +1,5 @@
 .catalog-page {
-  background: linear-gradient(135deg, #f5f5dc 0%, #f0f8f0 100%);
+  background: linear-gradient(135deg, #f8f4f0 0%, #f0f0e8 100%);
 }
 
 .catalog-controls {
@@ -14,7 +14,7 @@
 .search-input {
   width: 100%;
   padding: 1rem 3rem 1rem 1rem;
-  border: 2px solid #e6f3e6;
+  border: 2px solid #e5c9b3;
   border-radius: 12px;
   font-size: 1rem;
   background: white;
@@ -23,8 +23,8 @@
 
 .search-input:focus {
   outline: none;
-  border-color: #8fbc8f;
-  box-shadow: 0 0 0 3px rgba(143, 188, 143, 0.1);
+  border-color: #d4b8a0;
+  box-shadow: 0 0 0 3px rgba(229, 201, 179, 0.1);
 }
 
 .search-icon {
@@ -33,7 +33,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.2rem;
-  color: #8fbc8f;
+  color: #d4b8a0;
 }
 
 .category-filters {
@@ -48,24 +48,24 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  border: 2px solid #e6f3e6;
+  border: 2px solid #e5c9b3;
   border-radius: 8px;
   background: white;
-  color: #2d5a27;
+  color: #8b6b4b;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .category-btn:hover {
-  border-color: #8fbc8f;
-  background-color: #f0f8f0;
+  border-color: #d4b8a0;
+  background-color: #f8f4f0;
 }
 
 .category-btn.active {
-  background-color: #8fbc8f;
+  background-color: #d4b8a0;
   color: white;
-  border-color: #8fbc8f;
+  border-color: #d4b8a0;
 }
 
 .category-icon {
@@ -75,14 +75,14 @@
 .subcategory-filters {
   margin-top: 1.5rem;
   padding: 1.5rem;
-  background: white;
+  background: #f8f4f0;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
-  border: 2px solid #f0f8f0;
+  border: 2px solid #e5c9b3;
 }
 
 .subcategory-filters h3 {
-  color: #2d5a27;
+  color: #8b6b4b;
   font-size: 1.1rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -96,10 +96,10 @@
 
 .subcategory-btn {
   padding: 0.5rem 1rem;
-  border: 2px solid #e6f3e6;
+  border: 2px solid #e5c9b3;
   border-radius: 6px;
   background: white;
-  color: #2d5a27;
+  color: #8b6b4b;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -107,24 +107,25 @@
 }
 
 .subcategory-btn:hover {
-  border-color: #8fbc8f;
-  background-color: #f0f8f0;
+  border-color: #d4b8a0;
+  background-color: #f8f4f0;
 }
 
 .subcategory-btn.active {
-  background-color: #8fbc8f;
+  background-color: #d4b8a0;
   color: white;
-  border-color: #8fbc8f;
+  border-color: #d4b8a0;
 }
 
 .results-info {
   margin-bottom: 2rem;
   color: #666;
   font-size: 0.9rem;
-  background: white;
+  background: #f8f4f0;
   padding: 1rem 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
+  border: 2px solid #e5c9b3;
 }
 
 .results-info p {
@@ -138,13 +139,14 @@
 .no-results {
   text-align: center;
   padding: 4rem 2rem;
-  background: white;
+  background: #f8f4f0;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(139, 69, 19, 0.1);
+  border: 2px solid #e5c9b3;
 }
 
 .no-results h3 {
-  color: #2d5a27;
+  color: #8b6b4b;
   margin-bottom: 1rem;
 }
 
@@ -159,25 +161,25 @@
 }
 
 .tea-card {
-  background: white;
+  background: #f8f4f0;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(139, 69, 19, 0.1);
   transition: all 0.3s ease;
-  border: 2px solid #f0f8f0;
+  border: 2px solid #e5c9b3;
 }
 
 .tea-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(139, 69, 19, 0.15);
-  border-color: #8fbc8f;
+  border-color: #d4b8a0;
 }
 
 .tea-image {
   font-size: 4rem;
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #f0f8f0 0%, #e6f3e6 100%);
+  background: linear-gradient(135deg, #f0f0e8 0%, #e8e0d8 100%);
 }
 
 .tea-info {
@@ -185,7 +187,7 @@
 }
 
 .tea-name {
-  color: #2d5a27;
+  color: #8b6b4b;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
