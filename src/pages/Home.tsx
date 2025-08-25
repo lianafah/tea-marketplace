@@ -11,7 +11,7 @@ const Home: React.FC = () => {
       <div className="container">
         <div className="hero-section">
           <div className="hero-content">
-            <h1 className="hero-title">Alfrerov tea</h1>
+            <h1 className="hero-title">Alferov tea</h1>
             <p className="hero-motto">
               Замедляйся. Слушай. Пробуй. Исследуй.
             </p>
