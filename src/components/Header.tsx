@@ -46,7 +46,6 @@ const Header: React.FC = () => {
               data-emoji="🛒"
             >
               <div className="cart-icon-container">
-                🛒
                 {cartItemsCount > 0 && (
                   <span className="cart-badge">{cartItemsCount}</span>
                 )}
