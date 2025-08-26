@@ -45,10 +45,13 @@ const Header: React.FC = () => {
               className={`nav-link ${isActive('/cart') ? 'active' : ''}`}
               data-emoji="🛒"
             >
+              <div className="cart-icon-container">
+                🛒
+                {cartItemsCount > 0 && (
+                  <span className="cart-badge">{cartItemsCount}</span>
+                )}
+              </div>
               Корзина
-              {cartItemsCount > 0 && (
-                <span className="cart-badge">{cartItemsCount}</span>
-              )}
             </Link>
           </div>
         </div>
