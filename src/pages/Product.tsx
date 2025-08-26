@@ -66,7 +66,6 @@ const Product: React.FC = () => {
             </div>
             <div className="product-badges">
               <span className="badge origin">{tea.origin}</span>
-              <span className="badge rating">⭐ {tea.rating}</span>
               <span className="badge weight">{tea.weight}г</span>
             </div>
           </div>

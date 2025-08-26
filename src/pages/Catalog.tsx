@@ -135,7 +135,6 @@ const Catalog: React.FC = () => {
                   <div className="tea-details">
                     <div className="tea-meta">
                       <span className="tea-origin">{tea.origin}</span>
-                      <span className="tea-rating">⭐ {tea.rating}</span>
                     </div>
                     <div className="tea-specs">
                       <span className="tea-weight">{tea.weight}г</span>

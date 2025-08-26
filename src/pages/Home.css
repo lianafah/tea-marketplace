@@ -123,21 +123,19 @@
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Уменьшил с 400px на 280px (на 30%) */
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .category-card {
   background: #f8f4f0;
-  padding: 2.5rem 2rem;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
   border: 2px solid #e5c9b3;
-  transition: all 0.4s ease;
-  text-decoration: none;
-  color: inherit;
+  border-radius: 16px;
+  padding: 2.1rem 1.4rem; /* Уменьшил с 3rem 2rem на 2.1rem 1.4rem (на 30%) */
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(139, 69, 19, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -165,9 +163,9 @@
 }
 
 .category-icon {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
+  font-size: 3.5rem; /* Уменьшил с 5rem на 3.5rem (на 30%) */
+  margin-bottom: 1.4rem; /* Уменьшил с 2rem на 1.4rem (на 30%) */
+  display: block;
 }
 
 .category-card:hover .category-icon {
@@ -175,18 +173,18 @@
 }
 
 .category-card h3 {
+  font-size: 1.4rem; /* Уменьшил с 2rem на 1.4rem (на 30%) */
   color: #8b6b4b;
   margin-bottom: 1rem;
-  font-size: 1.4rem;
-  font-weight: 600;
   font-family: 'Playfair Display', serif;
+  font-weight: 600;
 }
 
 .category-card p {
+  font-size: 0.98rem; /* Уменьшил с 1.4rem на 0.98rem (на 30%) */
   color: #666;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
+  margin-bottom: 1.4rem; /* Уменьшил с 2rem на 1.4rem (на 30%) */
 }
 
 .category-arrow {

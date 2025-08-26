@@ -24,35 +24,42 @@ body {
   padding: 0 20px;
 }
 
+/* Кнопки */
 .btn {
-  padding: 12px 24px;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.2s ease;
   text-decoration: none;
-  display: inline-block;
+  font-weight: 600;
   text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+  min-height: 44px;
+  line-height: 1.2;
 }
 
 .btn-primary {
-  background-color: #2d5a27;
+  background: #8b6b4b; /* Изменил с зеленого на коричневый */
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #1e3d1a;
+  background: #6d5239; /* Темнее коричневый при наведении */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 107, 75, 0.3);
 }
 
 .btn-secondary {
-  background-color: #6c757d;
-  color: white;
+  background: #d4b8a0; /* Светло-коричневый */
+  color: #2d2d2d;
 }
 
 .btn-secondary:hover {
-  background-color: #5a6268;
+  background: #c4a890; /* Темнее светло-коричневый при наведении */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 184, 160, 0.3);
 }
 
 .card {

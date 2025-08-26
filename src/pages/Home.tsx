@@ -17,11 +17,6 @@ const Home: React.FC = () => {
             <p className="hero-motto">
               Замедляйся. Слушай. Пробуй. Исследуй.
             </p>
-            <p className="hero-description">
-              Здесь вы найдёте разные виды чая — от классики до редких сортов. 
-              Каждый чай имеет свой характер, аромат и настроение, 
-              которые можно почувствовать в каждой чашке.
-            </p>
             <div className="hero-button-container">
               <Link to="/catalog" className="btn btn-primary hero-btn">
                 Перейти в каталог
@@ -77,10 +72,9 @@ const Home: React.FC = () => {
                 <div className="tea-info">
                   <h3 className="tea-name">{tea.name}</h3>
                   <p className="tea-description">{tea.description}</p>
-                  <div className="tea-meta">
-                    <span className="tea-origin">{tea.origin}</span>
-                    <span className="tea-rating">⭐ {tea.rating}</span>
-                  </div>
+                                          <div className="tea-meta">
+                          <span className="tea-origin">{tea.origin}</span>
+                        </div>
                   <div className="tea-price">{tea.price} ₽</div>
                   <Link to={`/product/${tea.id}`} className="btn btn-primary">
                     Подробнее
