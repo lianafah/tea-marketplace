@@ -5,15 +5,15 @@
 .hero-section {
   background: linear-gradient(135deg, #f8f4f0 0%, #e8e0d8 100%);
   border-radius: 20px;
-  padding: 1rem 1rem; /* Уменьшил еще в 2 раза: с 2rem 1.5rem */
-  margin: 0 2rem 1rem 2rem; /* Уменьшил нижний margin с 2rem до 1rem */
+  padding: 1rem 1rem;
+  margin: 0 2rem 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem; /* Уменьшил gap с 2rem до 1rem */
+  gap: 1rem;
   box-shadow: 0 8px 32px rgba(139, 69, 19, 0.1);
   border: 2px solid #e5c9b3;
-  max-width: 800px;
+  max-width: 400px; /* Уменьшил с 800px до 400px (в 2 раза) */
   margin-left: auto;
   margin-right: auto;
   min-height: auto;
@@ -325,11 +325,12 @@
   margin-bottom: 1.5rem;
 }
 
+/* Мобильная версия - еще уже */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 2rem 1rem;
-    margin: 0 1rem 2rem 1rem;
-    min-height: 60vh;
+    max-width: 300px; /* Еще уже для мобильных */
+    margin: 0 1rem 1rem 1rem; /* Меньше боковых отступов */
+    padding: 0.75rem 0.75rem; /* Меньше внутренних отступов */
   }
   
   .hero-title {
@@ -383,8 +384,9 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 1.5rem 0.5rem;
-    margin: 0 0.5rem 1.5rem 0.5rem;
+    max-width: 250px; /* Самый узкий для маленьких экранов */
+    margin: 0 0.5rem 1rem 0.5rem; /* Минимальные отступы */
+    padding: 0.5rem 0.5rem; /* Минимальные внутренние отступы */
   }
   
   .hero-title {
