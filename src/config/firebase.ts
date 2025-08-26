@@ -2,14 +2,15 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
-// Конфигурация Firebase (замените на ваши данные)
+// Конфигурация Firebase для проекта "alferov-tea"
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCqtkCxjL82hqd1SERu_ohQ4NcH7QivXgU",
+  authDomain: "alferov-tea.firebaseapp.com",
+  projectId: "alferov-tea",
+  storageBucket: "alferov-tea.firebasestorage.app",
+  messagingSenderId: "959389801989",
+  appId: "1:959389801989:web:61f7a00e1b176722e7466c",
+  measurementId: "G-0BBWE4KQPW"
 }
 
 // Инициализация Firebase
