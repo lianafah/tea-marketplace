@@ -1,8 +1,8 @@
 .footer {
-  background-color: #2d5a27;
-  color: white;
-  padding: 2rem 0 1rem;
-  margin-top: auto;
+  background: #e5c9b3;
+  color: #2d2d2d;
+  padding: 3rem 0 1rem 0;
+  margin-top: 4rem;
 }
 
 .footer-content {
@@ -14,8 +14,9 @@
 
 .footer-section h3,
 .footer-section h4 {
+  color: #8b6b4b;
   margin-bottom: 1rem;
-  color: #a8e6cf;
+  font-family: 'Playfair Display', serif;
 }
 
 .footer-section h3 {
@@ -28,14 +29,16 @@
 
 .footer-section p {
   margin-bottom: 0.5rem;
-  opacity: 0.9;
+  line-height: 1.6;
+  color: #4a4a4a;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1rem;
+  border-top: 2px solid #d4b8a0;
+  padding-top: 1.5rem;
   text-align: center;
-  opacity: 0.8;
+  color: #8b6b4b;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

@@ -69,26 +69,6 @@ const Profile: React.FC = () => {
                   </div>
                 )}
               </div>
-              
-              <div className="profile-section">
-                <h3>📱 Настройки</h3>
-                <div className="settings-list">
-                  <div className="setting-item">
-                    <span>Уведомления о заказах</span>
-                    <label className="switch">
-                      <input type="checkbox" defaultChecked />
-                      <span className="slider"></span>
-                    </label>
-                  </div>
-                  <div className="setting-item">
-                    <span>Новости и акции</span>
-                    <label className="switch">
-                      <input type="checkbox" />
-                      <span className="slider"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
