@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           <div className="hero-content">
             <h1 className="hero-title">Alferov tea</h1>
             <p className="hero-motto">
-              Замедляйся. Слушай. Пробуй. Исследуй.
+              Чай согреет ваше сердечко
             </p>
             <div className="hero-button-container">
               <Link to="/catalog" className="btn btn-primary hero-btn">
