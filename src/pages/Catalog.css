@@ -175,11 +175,52 @@
   border-color: #d4b8a0;
 }
 
+.tea-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tea-image {
   font-size: 4rem;
   text-align: center;
   padding: 2rem;
   background: linear-gradient(135deg, #f0f0e8 0%, #e8e0d8 100%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.favorite-btn.active {
+  animation: heartBeat 0.3s ease-in-out;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.tea-card:hover .tea-image {
+  transform: scale(1.05);
 }
 
 .tea-info {

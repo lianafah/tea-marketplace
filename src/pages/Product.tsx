@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getTeaById } from '../data/teaData'
 import { useCartStore } from '../stores/cartStore'
+import { useFavoritesStore } from '../stores/favoritesStore'
 import './Product.css'
 
 const Product: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const { addToCart } = useCartStore()
+  const { isFavorite, toggleFavorite } = useFavoritesStore()
   const [quantity, setQuantity] = useState(1)
 
   const tea = getTeaById(Number(id))
@@ -52,7 +54,16 @@ const Product: React.FC = () => {
       <div className="container">
         <div className="product-content">
           <div className="product-image-section">
-            <div className="product-image">{tea.image}</div>
+            <div className="product-image-container">
+              <div className="product-image">{tea.image}</div>
+              <button 
+                className={`favorite-btn ${isFavorite(tea.id) ? 'active' : ''}`}
+                onClick={() => toggleFavorite(tea.id)}
+                aria-label={isFavorite(tea.id) ? 'Убрать из избранного' : 'Добавить в избранное'}
+              >
+                {isFavorite(tea.id) ? '❤️' : '🤍'}
+              </button>
+            </div>
             <div className="product-badges">
               <span className="badge origin">{tea.origin}</span>
               <span className="badge rating">⭐ {tea.rating}</span>

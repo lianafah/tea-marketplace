@@ -1,7 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useFavoritesStore } from '../stores/favoritesStore'
+import { teas } from '../data/teaData'
 import './Profile.css'
 
 const Profile: React.FC = () => {
+  const { favorites, removeFromFavorites } = useFavoritesStore()
+  
+  // Получаем избранные чаи
+  const favoriteTeas = teas.filter(tea => favorites.includes(tea.id))
+
   return (
     <div className="page profile-page">
       <div className="container">
@@ -28,10 +36,38 @@ const Profile: React.FC = () => {
               
               <div className="profile-section">
                 <h3>❤️ Избранное</h3>
-                <div className="empty-state">
-                  <p>Добавляйте любимые чаи в избранное</p>
-                  <p>И мы будем рекомендовать похожие сорта</p>
-                </div>
+                {favoriteTeas.length === 0 ? (
+                  <div className="empty-state">
+                    <p>Добавляйте любимые чаи в избранное</p>
+                    <p>И мы будем рекомендовать похожие сорта</p>
+                  </div>
+                ) : (
+                  <div className="favorites-list">
+                    <p className="favorites-count">В избранном: {favoriteTeas.length} чаев</p>
+                    <div className="favorites-grid">
+                      {favoriteTeas.map((tea) => (
+                        <div key={tea.id} className="favorite-tea-card">
+                          <div className="favorite-tea-image">{tea.image}</div>
+                          <div className="favorite-tea-info">
+                            <h4 className="favorite-tea-name">{tea.name}</h4>
+                            <p className="favorite-tea-price">{tea.price} ₽</p>
+                            <div className="favorite-tea-actions">
+                              <Link to={`/product/${tea.id}`} className="btn btn-secondary btn-sm">
+                                Подробнее
+                              </Link>
+                              <button 
+                                className="btn btn-danger btn-sm"
+                                onClick={() => removeFromFavorites(tea.id)}
+                              >
+                                Убрать
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
               
               <div className="profile-section">

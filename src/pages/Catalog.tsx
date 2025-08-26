@@ -1,20 +1,23 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { teas, teaCategories, teaSubcategories, getSubcategoriesByCategory } from '../data/teaData'
+import React, { useState, useEffect } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
+import { teas, teaCategories, teaSubcategories, getTeasBySubcategory, getSubcategoriesByCategory } from '../data/teaData'
 import { useCartStore } from '../stores/cartStore'
+import { useFavoritesStore } from '../stores/favoritesStore'
 import './Catalog.css'
 
 const Catalog: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedSubcategory, setSelectedSubcategory] = useState('')
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchParams, setSearchParams] = useSearchParams()
   const { addToCart } = useCartStore()
+  const { isFavorite, toggleFavorite } = useFavoritesStore()
 
   const filteredTeas = teas.filter(tea => {
     const matchesCategory = selectedCategory === 'all' || tea.category === selectedCategory
     const matchesSubcategory = !selectedSubcategory || tea.subcategory === selectedSubcategory
-    const matchesSearch = tea.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         tea.description.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesSearch = tea.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         tea.description.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSubcategory && matchesSearch
   })
 
@@ -48,8 +51,8 @@ const Catalog: React.FC = () => {
             <input
               type="text"
               placeholder="Поиск чая..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               className="search-input"
             />
             <span className="search-icon">🔍</span>
@@ -111,7 +114,20 @@ const Catalog: React.FC = () => {
           <div className="teas-grid">
             {filteredTeas.map((tea) => (
               <div key={tea.id} className="tea-card">
-                <div className="tea-image">{tea.image}</div>
+                <div className="tea-image-container">
+                  <div className="tea-image">{tea.image}</div>
+                  <button 
+                    className={`favorite-btn ${isFavorite(tea.id) ? 'active' : ''}`}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      toggleFavorite(tea.id)
+                    }}
+                    aria-label={isFavorite(tea.id) ? 'Убрать из избранного' : 'Добавить в избранное'}
+                  >
+                    {isFavorite(tea.id) ? '❤️' : '🤍'}
+                  </button>
+                </div>
                 <div className="tea-info">
                   <h3 className="tea-name">{tea.name}</h3>
                   <p className="tea-description">{tea.description}</p>
