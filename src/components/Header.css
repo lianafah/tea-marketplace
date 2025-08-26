@@ -33,15 +33,15 @@
   color: #2d2d2d;
   text-decoration: none;
   font-weight: 500;
-  padding: 0.75rem 1.5rem;
+  padding: 0 1.5rem; /* Убрал вертикальный padding, оставил только горизонтальный */
   border-radius: 8px;
   transition: all 0.2s ease;
   font-family: 'Playfair Display', serif;
   position: relative;
   display: flex;
-  align-items: center; /* Центрируем по вертикали */
+  align-items: center; /* Центрируем по вертикали содержимое ссылки */
   gap: 0.5rem;
-  line-height: 1; /* Убираем лишнюю высоту */
+  line-height: 1; /* Убираем лишнюю высоту строки */
 }
 
 .nav-link:hover {
@@ -114,7 +114,7 @@
   }
 
   .nav-link {
-    padding: 0.5rem 0.75rem;
+    padding: 0 0.75rem; /* Убрал вертикальный padding для мобильной версии */
     font-size: 0.85rem;
     min-width: auto;
     flex: 1;
@@ -138,7 +138,7 @@
 
 @media (max-width: 480px) {
   .nav-link {
-    padding: 0.4rem 0.6rem;
+    padding: 0 0.6rem; /* Убрал вертикальный padding для самой маленькой мобильной версии */
     font-size: 0.8rem;
     max-width: 100px;
     flex-direction: column;
