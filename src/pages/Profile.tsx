@@ -64,14 +64,6 @@ const Profile: React.FC = () => {
         
         <div className="profile-content">
           <div className="profile-card">
-            <div className="profile-header">
-              <div className="profile-avatar">👤</div>
-              <div className="profile-info">
-                <h2>Добро пожаловать!</h2>
-                <p>Ваш профиль в Чайном Мире</p>
-              </div>
-            </div>
-            
             <div className="profile-sections">
               <div className="profile-section">
                 <h3>📋 Мои заказы</h3>

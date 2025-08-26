@@ -8,37 +8,17 @@
 }
 
 .profile-card {
-  background: white;
-  border-radius: 20px;
+  background: #f8f4f0;
+  border: 2px solid #e5c9b3;
+  border-radius: 16px;
+  padding: 2rem;
   box-shadow: 0 4px 16px rgba(139, 69, 19, 0.1);
-  overflow: hidden;
-}
-
-.profile-header {
-  background: linear-gradient(135deg, #8fbc8f 0%, #a8e6cf 100%);
-  color: white;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.profile-avatar {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.profile-info h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.profile-info p {
-  font-size: 1.1rem;
-  opacity: 0.9;
 }
 
 .profile-sections {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .profile-section {

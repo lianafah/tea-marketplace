@@ -23,31 +23,31 @@ const Header: React.FC = () => {
             {/* Центральная часть пустая */}
           </div>
           
-          <div className="header-right">
-            <Link 
-              to="/profile" 
-              className={`nav-link ${isActive('/profile') ? 'active' : ''}`}
-            >
-              Профиль
-            </Link>
-            
-            <Link 
-              to="/catalog" 
-              className={`nav-link ${isActive('/catalog') ? 'active' : ''}`}
-            >
-              Каталог
-            </Link>
-            
-            <Link 
-              to="/cart" 
-              className={`nav-link ${isActive('/cart') ? 'active' : ''}`}
-            >
-              🛒 Корзина
-              {cartItemsCount > 0 && (
-                <span className="cart-badge">{cartItemsCount}</span>
-              )}
-            </Link>
-          </div>
+                           <div className="header-right">
+                   <Link
+                     to="/catalog"
+                     className={`nav-link ${isActive('/catalog') ? 'active' : ''}`}
+                   >
+                     📚 Каталог
+                   </Link>
+
+                   <Link
+                     to="/profile"
+                     className={`nav-link ${isActive('/profile') ? 'active' : ''}`}
+                   >
+                     👤 Профиль
+                   </Link>
+
+                   <Link
+                     to="/cart"
+                     className={`nav-link ${isActive('/cart') ? 'active' : ''}`}
+                   >
+                     🛒 Корзина
+                     {cartItemsCount > 0 && (
+                       <span className="cart-badge">{cartItemsCount}</span>
+                     )}
+                   </Link>
+                 </div>
         </div>
       </div>
     </header>
