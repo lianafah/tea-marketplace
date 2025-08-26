@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getTeaById } from '../data/teaData'
 import { useCartStore } from '../stores/cartStore'
-import { useFavoritesStore } from '../stores/favoritesStore'
+import { useFirebaseFavoritesStore } from '../stores/firebaseFavoritesStore'
 import './Product.css'
 
 const Product: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const { addToCart } = useCartStore()
-  const { isFavorite, toggleFavorite } = useFavoritesStore()
+  const { isFavorite, toggleFavorite } = useFirebaseFavoritesStore()
   const [quantity, setQuantity] = useState(1)
 
   const tea = getTeaById(Number(id))

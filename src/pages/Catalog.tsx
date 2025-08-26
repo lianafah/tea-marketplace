@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { teas, teaCategories, teaSubcategories, getTeasBySubcategory, getSubcategoriesByCategory } from '../data/teaData'
 import { useCartStore } from '../stores/cartStore'
-import { useFavoritesStore } from '../stores/favoritesStore'
+import { useFirebaseFavoritesStore } from '../stores/firebaseFavoritesStore'
 import './Catalog.css'
 
 const Catalog: React.FC = () => {
@@ -11,7 +11,7 @@ const Catalog: React.FC = () => {
   const [selectedSubcategory, setSelectedSubcategory] = useState('')
   const [searchParams, setSearchParams] = useSearchParams()
   const { addToCart } = useCartStore()
-  const { isFavorite, toggleFavorite } = useFavoritesStore()
+  const { isFavorite, toggleFavorite } = useFirebaseFavoritesStore()
 
   const filteredTeas = teas.filter(tea => {
     const matchesCategory = selectedCategory === 'all' || tea.category === selectedCategory

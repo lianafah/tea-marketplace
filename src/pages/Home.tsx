@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { teas, teaCategories } from '../data/teaData'
-import { useFavoritesStore } from '../stores/favoritesStore'
+import { useFirebaseFavoritesStore } from '../stores/firebaseFavoritesStore'
 import './Home.css'
 
 const Home: React.FC = () => {
   const popularTeas = teas.slice(0, 6)
-  const { isFavorite, toggleFavorite } = useFavoritesStore()
+  const { isFavorite, toggleFavorite } = useFirebaseFavoritesStore()
 
   return (
     <div className="page home-page">

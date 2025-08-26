@@ -236,6 +236,33 @@ input:checked + .slider:before {
   background-color: #c0392b;
 }
 
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f8f4f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(139, 69, 19, 0.1);
+  border: 2px solid #e5c9b3;
+}
+
+.loading-state h2,
+.error-state h2 {
+  color: #8b6b4b;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.loading-state p,
+.error-state p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.error-state .btn {
+  margin-top: 1rem;
+}
+
 @media (max-width: 768px) {
   .profile-header {
     padding: 2rem 1rem;

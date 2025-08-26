@@ -1,14 +1,61 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useFavoritesStore } from '../stores/favoritesStore'
+import { useFirebaseFavoritesStore } from '../stores/firebaseFavoritesStore'
 import { teas } from '../data/teaData'
+import { getTelegramUser } from '../utils/telegram'
 import './Profile.css'
 
 const Profile: React.FC = () => {
-  const { favorites, removeFromFavorites } = useFavoritesStore()
+  const { 
+    favorites, 
+    removeFromFavorites, 
+    isLoading, 
+    error, 
+    initializeWithTelegramId 
+  } = useFirebaseFavoritesStore()
   
   // Получаем избранные чаи
   const favoriteTeas = teas.filter(tea => favorites.includes(tea.id))
+
+  // Инициализируем Firebase при загрузке
+  useEffect(() => {
+    const telegramUser = getTelegramUser()
+    if (telegramUser?.id) {
+      initializeWithTelegramId(telegramUser.id)
+    }
+  }, [initializeWithTelegramId])
+
+  if (isLoading) {
+    return (
+      <div className="page profile-page">
+        <div className="container">
+          <div className="loading-state">
+            <h2>Загружаем избранное...</h2>
+            <p>Пожалуйста, подождите</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="page profile-page">
+        <div className="container">
+          <div className="error-state">
+            <h2>Ошибка загрузки</h2>
+            <p>{error}</p>
+            <button 
+              className="btn btn-primary"
+              onClick={() => window.location.reload()}
+            >
+              Попробовать снова
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="page profile-page">
