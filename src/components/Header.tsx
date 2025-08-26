@@ -42,10 +42,10 @@ const Header: React.FC = () => {
 
             <Link
               to="/cart"
-              className={`nav-link ${isActive('/cart') ? 'active' : ''}`}
-              data-emoji="🛒"
+              className={`nav-link cart-link ${isActive('/cart') ? 'active' : ''}`}
             >
-              <div className="cart-icon-container">
+              <div className="cart-icon-wrapper">
+                🛒
                 {cartItemsCount > 0 && (
                   <span className="cart-badge">{cartItemsCount}</span>
                 )}

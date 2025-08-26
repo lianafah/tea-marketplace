@@ -52,17 +52,33 @@
   background-color: rgba(139, 107, 75, 0.2);
 }
 
-.cart-icon-container {
+/* Стили для эмоджи Каталога и Профиля (не для Корзины) */
+.nav-link:not(.cart-link)::before {
+  content: attr(data-emoji);
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-right: 0.25rem;
+  min-width: 1.2em;
+  min-height: 1.2em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Контейнер для иконки корзины и кружка */
+.cart-icon-wrapper {
   position: relative;
   display: inline-block;
   min-width: 1.2em;
   min-height: 1.2em;
+  margin-right: 0.25rem;
+  vertical-align: middle;
 }
 
+/* Красный кружок над эмоджи корзины */
 .cart-badge {
   position: absolute;
-  top: -6px;
-  right: -6px;
+  top: -8px;
+  right: -8px;
   background: #e74c3c;
   color: white;
   border-radius: 50%;
