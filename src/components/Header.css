@@ -72,6 +72,8 @@
   min-height: 1.2em;
   margin-right: 0.25rem;
   vertical-align: middle;
+  font-size: 1.2rem; /* Увеличиваем размер эмоджи корзины */
+  line-height: 1; /* Для лучшего выравнивания */
 }
 
 /* Красный кружок над эмоджи корзины */
