@@ -1,7 +1,7 @@
 .header {
   background: #e5c9b3;
   color: #2d2d2d;
-  padding: 1rem 0;
+  padding: 0.75rem 0; /* Уменьшил с 1rem до 0.75rem */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -39,8 +39,9 @@
   font-family: 'Playfair Display', serif;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: center; /* Центрируем по вертикали */
   gap: 0.5rem;
+  line-height: 1; /* Убираем лишнюю высоту */
 }
 
 .nav-link:hover {
@@ -62,6 +63,7 @@
   min-height: 1.2em;
   line-height: 1;
   vertical-align: middle;
+  flex-shrink: 0; /* Предотвращаем сжатие */
 }
 
 /* Контейнер для иконки корзины и кружка */
@@ -74,6 +76,7 @@
   vertical-align: middle;
   font-size: 1.2rem; /* Увеличиваем размер эмоджи корзины */
   line-height: 1; /* Для лучшего выравнивания */
+  flex-shrink: 0; /* Предотвращаем сжатие */
 }
 
 /* Красный кружок над эмоджи корзины */
