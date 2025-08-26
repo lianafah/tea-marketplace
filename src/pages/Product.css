@@ -33,26 +33,28 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #000000;
+  background: none;
+  border: none;
   font-size: 2rem;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
   transition: all 0.2s ease;
   z-index: 10;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 2px #000000;
+  text-stroke: 2px #000000;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .favorite-btn:hover {
   transform: scale(1.1);
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
 }
 
 .favorite-btn.active {
   animation: heartBeat 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 1);
+  -webkit-text-stroke: 2px #000000;
+  text-stroke: 2px #000000;
 }
 
 @keyframes heartBeat {
